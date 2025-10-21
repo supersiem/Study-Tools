@@ -1,8 +1,13 @@
-popstate()
-window.addEventListener('popstate', popstate)
-async function popstate() {
-    // Only run on the theme store
-    if (! await awaitElement('meta#theme-store-st')) return
-    // Provide the page with this extension's ID
-    element('meta', `st-${chrome.runtime.id}`, document.head)
-}
+document.querySelector('nostudytοοls').remove();
+document.getElementById('IMPORT-BUTTON').onclick = () => {
+    const data = document.getElementById('STUDYTOOLS-DATA').innerText;
+    try {
+        const parsedData = JSON.parse(data);
+        // @ts-ignore
+        chrome.storage.local.set({ 'storedThemes': parsedData }, () => {
+            alert('Themes imported successfully!');
+        });
+    } catch (e) {
+        alert('Invalid data format.');
+    }
+};

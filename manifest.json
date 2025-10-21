@@ -85,10 +85,9 @@
         },
         {
             "matches": [
-                "*://study-tools.nl/*"
+                "*://localhost:3000/*"
             ],
             "js": [
-                "src/scripts/util.js",
                 "src/scripts/theme-store.js"
             ]
         }

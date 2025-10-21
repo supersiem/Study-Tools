@@ -245,10 +245,12 @@ async function storeCurrentTheme() {
             <template #headline>Thema opslaan</template>
             <template #text>
                 Als je wilt, kun je dit thema een naam geven en een auteur toevoegen.
-                <TextInput v-model="savePromptName" style="margin-top: 16px; --context-color: var(--color-surface-container-high);">
+                <TextInput v-model="savePromptName"
+                    style="margin-top: 16px; --context-color: var(--color-surface-container-high);">
                     <template #title>Naam thema</template>
                 </TextInput>
-                <TextInput v-model="savePromptAuthor" style="margin-top: 16px; --context-color: var(--color-surface-container-high);">
+                <TextInput v-model="savePromptAuthor"
+                    style="margin-top: 16px; --context-color: var(--color-surface-container-high);">
                     <template #title>Auteur</template>
                 </TextInput>
             </template>
